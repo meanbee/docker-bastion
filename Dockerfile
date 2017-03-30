@@ -4,7 +4,7 @@ FROM alpine:latest
 MAINTAINER Nick Jones <nick.jones@meanbee.com>
 
 # Install required packages
-RUN apk add --no-cache openssh mysql-client bash wget curl vim
+RUN apk add --no-cache openssh mysql-client bash wget curl vim shadow
 
 # Configure the SSH server
 RUN sed -i 's/\#PubkeyAuthentication\ yes/PubkeyAuthentication\ yes/' /etc/ssh/sshd_config && \
