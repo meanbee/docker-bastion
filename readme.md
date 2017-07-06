@@ -24,3 +24,15 @@ Or you could add it to your `docker-compose` configuration:
             - database
         expose:
             - 22
+
+You can SSH into the container using the published port and the `bastion` user with the provided password.
+
+## Environment variables
+
+### SSH_PASSWORD
+
+Required. Sets the password for the `bastion` user.
+
+### SSH_HOME_DIR
+
+Optional. Sets the home directory for the `bastion` user.

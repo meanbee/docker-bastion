@@ -7,4 +7,8 @@
 # Change the SSH user's password to the environment variable
 echo "bastion:${SSH_PASSWORD}" | chpasswd
 
+# Change bastion's home directory if specified
+[ -n "${SSH_HOME_DIR}" ] && \
+    usermod -d $SSH_HOME_DIR bastion
+
 exec "$@"
